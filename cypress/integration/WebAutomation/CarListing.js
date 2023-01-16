@@ -13,11 +13,11 @@ it("Create carListing",function(){
 carPage.enterEmail().type(this.data.Email);
 carPage.enterPassWord().type(this.data.Password);
 carPage.clickContBtn().click();
-carPage.enterFirstField().type('6');
-carPage.enterSecondField().type('8');
-carPage.enterThirdField().type('2');
-carPage.enterFourthField().type('7');
-carPage.enterFifthField().type('3');
+carPage.enterFirstField().type(this.data.numberOne);
+carPage.enterSecondField().type(this.data.numberTwo);
+carPage.enterThirdField().type(this.data.numberThree);
+carPage.enterFourthField().type(this.data.numberFour);
+carPage.enterFifthField().type(this.data.numberFive);
 carPage.clickLoginButton().click();
 })
 })
