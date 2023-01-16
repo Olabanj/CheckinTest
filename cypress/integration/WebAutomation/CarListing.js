@@ -1,7 +1,9 @@
 /// <reference types="Cypress"/>
 ///<reference types="cypress-iframe" />
+import LoginPage from "../POM/LoginPage";
 import CarPage from "../POM/CarPage";
-const carPage = new CarPage()
+const loginPage = new LoginPage();
+const carPage = new CarPage();
 describe("Create a carlisting",function(){
     before(function(){
         cy.visit('/')
@@ -10,16 +12,18 @@ describe("Create a carlisting",function(){
     })
 })
 it("Create carListing",function(){
-carPage.enterEmail().type(this.data.Email);
-carPage.enterPassWord().type(this.data.Password);
-carPage.clickContBtn().click();
-carPage.enterFirstField().type(this.data.numberOne);
-carPage.enterSecondField().type(this.data.numberTwo);
-carPage.enterThirdField().type(this.data.numberThree);
-carPage.enterFourthField().type(this.data.numberFour);
-carPage.enterFifthField().type(this.data.numberFive);
-carPage.clickLoginButton().click();
+loginPage.enterEmail().type(this.data.Email);
+loginPage.enterPassWord().type(this.data.Password);
+loginPage.clickContBtn().click();
+loginPage.enterFirstField().type(this.data.numberOne);
+loginPage.enterSecondField().type(this.data.numberTwo);
+loginPage.enterThirdField().type(this.data.numberThree);
+loginPage.enterFourthField().type(this.data.numberFour);
+loginPage.enterFifthField().type(this.data.numberFive);
+loginPage.clickLoginButton().click();
    // Create Car link
+carPage.pickCreateList().click()
+carPage.selHostCar().click()
 })
 })
 
