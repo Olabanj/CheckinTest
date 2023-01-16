@@ -8,7 +8,6 @@ cy.visit('/')
 carPage.enterEmail().type("olabanjotboy@gmail.com");
 carPage.enterPassWord().type("Testing@123");
 carPage.clickContBtn().click();
-cy.contains('Continue').click();
 carPage.enterFirstField().type('6');
 carPage.enterSecondField().type('8');
 carPage.enterThirdField().type('2');
