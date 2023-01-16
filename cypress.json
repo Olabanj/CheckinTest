@@ -1,5 +1,5 @@
 { 
-    "baseUrl": "https://checkin-test-ui.netlify.app",
+    "baseUrl":"https://checkin-test-ui.netlify.app",
     "videoUploadOnPasses": false,
     "pageLoadTimeout": 12000,
     "defaultCommandTimeout": 8000,

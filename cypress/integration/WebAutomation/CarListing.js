@@ -1,11 +1,11 @@
-/// <reference types="Cypress" />
+/// <reference types="Cypress"/>
+///<reference types="cypress-iframe" />
 import CarPage from "../POM/CarPage";
 const carPage = new CarPage()
 describe("Create a carlisting",function(){
     before(function(){
         cy.visit('/')
- 
-    cy.fixture("CarData").then(function(data) {
+   cy.fixture("CarData").then(function(data) {
         this.data=data
     })
 })
@@ -19,5 +19,7 @@ carPage.enterThirdField().type(this.data.numberThree);
 carPage.enterFourthField().type(this.data.numberFour);
 carPage.enterFifthField().type(this.data.numberFive);
 carPage.clickLoginButton().click();
+   // Create Car link
 })
 })
+
