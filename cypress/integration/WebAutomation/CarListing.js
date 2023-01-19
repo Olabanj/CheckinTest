@@ -40,7 +40,28 @@ carPage.selLocDropDown().each(($el, index, $list) => {
   carPage.enterCarVin().type("KNEPB3A23B7135414")
   carPage.pickVerificationLink().click()
   carPage.clickContinueButton().click()
+  //Car information
+  cy.get('[data-test="seleCarMilInner"]').click()
+  cy.get("[data-test='seleCarMil30,000 - 60,000 miles']").click()
+  cy.get('[data-test="carTransInner"]').click()
+  cy.get('[data-test="carTransAutomatic"]').click()
+  cy.get('[data-test="seleStyleInner"]').click()
+  cy.get('[data-test="seleStyleCoupe"]').click()
+  cy.get('[data-test="seleTrimInner"]').click()
+  cy.get('[data-test="seleTrimGT"]').click()
+  cy.get('[data-test="carColor"]').type("blue")
+  cy.get('[data-test="numbOfSeatsInner"]').click()
+  cy.get('[data-test="numbOfSeats3"]').click()
+  cy.get('[data-test="numbOfDoorsInner"]').click()
+  cy.get('[data-test="numbOfDoors3"]').click()
+  cy.get('[data-test="greenVehiclesInner"]').click()
+  cy.get('[data-test="greenVehiclesHybrid"]').click({force:true})
+  cy.get(':nth-child(3) > .sc-kjUDSv > input').click()
+  cy.get('[data-test="Car InformationCont1"]').click({force:true})
+
+
   });
 
 })
 
+ 
