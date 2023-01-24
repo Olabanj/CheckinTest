@@ -2,8 +2,10 @@
 ///<reference types="cypress-iframe" />
 import LoginPage from "../POM/LoginPage";
 import CarPage from "../POM/CarPage";
+import RandomNumber from "../POM/RandomNumber";
 const loginPage = new LoginPage();
 const carPage   = new CarPage();
+const varNumber = new RandomNumber();
 describe("Create a carlisting",function(){
     before(function(){
         cy.visit('/')
@@ -37,7 +39,7 @@ carPage.selLocDropDown().each(($el, index, $list) => {
       cy.wrap($el).click()
     } 
   })
-carPage.enterCarVin().type("KNEPB3A23B7135414")
+carPage.enterCarVin().type(this.data.carVin)
 carPage.pickVerificationLink().click()
 carPage.clickContinueButton().click()
   //Car information
@@ -49,7 +51,7 @@ carPage.selStyleInner().click()
 carPage.pickStyleInner().click()
 carPage.selTrimInner().click()
 carPage.pickTrimInner().click()
-carPage.pickCarColor().type("blue")
+carPage.pickCarColor().type(this.data.carColor)
 carPage.selNumOfSit().click()
 carPage.pickNumOfSit().click()
 carPage.selNumOfDoor().click()
@@ -58,8 +60,32 @@ carPage.selGreenVehicles().click()
 carPage.pickGreenVehicles().click({force:true})
 carPage.selCarChecBox().click()
 carPage.clickInfoCont().click({force:true})
-  
-  });
+//Booking information
+carPage.selAdvNoticeBeforePickUp().click()
+carPage.pickAdvNoticeBeforePickUp().click()
+carPage.selBookAvail().click()
+carPage.pickBookAvail().click()
+carPage.selMinTripDuration().click()
+carPage.pickMinTripDuration().click()
+carPage.selMaxTripDuration().click()
+carPage.pickMaxTripDuration().click()
+carPage.selDailyLimitRange().click()
+carPage.pickDailyLimitRange().click()
+carPage.selApprovalCheckBox().click()
+carPage.clickBookingInfo().click()
+//Car features
+carPage.pickBlindSpotAlert().check()
+carPage.pickBluetooth().check()
+carPage.pickParkingAssistant().check()
+carPage.enterCustomeField().type(this.data.carFeature)
+carPage.enterCustomeField().click()
+carPage.carFeatureCont().click()
+//Car description
+carPage.selCarPlateNumber().type(varNumber.plateNumber)
+carPage.checkCarCategories().check()
+carPage.selCarDescription().type("black")
+carPage.clickCarDescriptionCont().click()
+});
 
 })
 
