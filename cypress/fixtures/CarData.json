@@ -1,11 +1,14 @@
 {
-    "Email":"olabanjotboy@gmail.com",
-    "Password":"Testing@123",
+    "Email":"ade@mailinator.com",
+    "Password":"Testing@1",
     "numberOne":  "3",
     "numberTwo":  "4",
     "numberThree":"5",
     "numberFour": "6",
-    "numberFive": "7"
+    "numberFive": "7",
+    "carVin":"KNEPB3A23B7135414",
+    "carColor":"blue",
+    "carFeature":"Benz"
 
 
 
